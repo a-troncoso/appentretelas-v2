@@ -1,0 +1,60 @@
+$gray: #808080;
+$gray-lighten-30: lighten($gray, 30%);
+$gray-lighten-50: lighten($gray, 50%);
+$teal: #008080;
+$teal-darken-2: darken($teal, 2%);
+
+
+.root {
+	width: 15vw;
+
+	.menu {
+		// flex: 0 0 15rem;
+		height: 100vh;
+		background-color: $teal;
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style-type: none;
+
+			li {
+
+				a {
+					display: block;
+					padding: .5rem;
+					border-bottom: 1px solid $gray;
+					text-decoration: none;
+					color: $gray-lighten-30;
+					cursor: pointer;
+					&:hover {
+						background-color: $teal-darken-2;
+					}
+					i: {
+						margin-right: .2rem;}
+				}
+
+				ul {
+					max-height: 0;
+					transition: max-height 1s ease-out;
+					overflow: hidden;
+					li a {
+						border: 0;
+						padding-left: 2rem;
+						&:hover {
+							color: $gray-lighten-50;
+							background-color: $teal;
+						}
+					}
+				}
+			}
+
+			.menuActive {
+				max-height: 500px;
+			}
+			.menuDisactive {
+				max-height: 0;
+			}
+		}
+
+	}
+}

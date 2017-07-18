@@ -1,0 +1,16 @@
+{
+	// para q babel transpile
+	"presets": [
+		"react",
+		// funcionalidades q estan a punto de ser aprobadas por el estandar
+		"stage-2",
+		["env", {
+
+			"modules": "commonjs",
+			"targets": {
+			 // a q navegadores queremos dar soporte
+				"browsers": ["last 2 versions", "safari >= 7"]
+			}
+		}]
+	]
+}
